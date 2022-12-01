@@ -15,10 +15,12 @@ startElement.addEventListener('click', function(){
 
    let smallCube
    for(let i = 1; i <= 100; i++) {
-      
+      smallCube = createCube();
+      smallCube.innerHTML = i
+      boxElement.appendChild(smallCube)
+      grenadeList.push(smallCube)
    }
    
 
 
 })
-let resultGame= 0
