@@ -1,0 +1,12 @@
+#largeBox{
+   height: 650px;
+   width: 650px;
+   border: 2px solid rgb(255, 255, 255);
+}
+
+
+div.cube{
+   width: calc(100% / 10);
+   height: calc(100% / 10);
+   border: 2px solid black;
+}
