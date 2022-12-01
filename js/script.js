@@ -9,19 +9,16 @@ const boxElement = document.getElementById('largeBox');
 const sectionMainElement = document.getElementById('sectionMain');
 
 startElement.addEventListener('click', function(){
-   sectionMainElement.classList.toggle('resetCube')
-   
-   function cubeCreation (){
-      const divCreateElement = document.createElement('div')
-      divCreateElement.classList.add('cube')
-      return divCreateElement
-   }
-   
-   for (let i = 1; i <= 100; i++){
-      const newCube= cubeCreation ();
-      newCube.innerHTML = i;
-      boxElement.appendChild(newCube);
-   }
+   boxElement.innerHTML = ""
+   boxElement.classList.add('largeBox')
+   const grenadeList = []
 
+   let smallCube
+   for(let i = 1; i <= 100; i++) {
+      
+   }
    
+
+
 })
+let resultGame= 0
