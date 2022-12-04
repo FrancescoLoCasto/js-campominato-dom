@@ -8,3 +8,7 @@ const boxElement = document.getElementById('largeBox');
 const startElement = document.getElementById('playButton');
 const sectionMainElement = document.getElementById('sectionMain');
 const value = document.getElementById('value');
+
+startElement.addEventListener('click', function(){
+
+})
