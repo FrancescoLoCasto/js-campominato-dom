@@ -26,7 +26,7 @@ startElement.addEventListener('click', function(){
             newSquareBox.innerHTML = i
 
             newSquareBox.addEventListener('click', function(){
-               if (score>=(100 - (granadeList.length + 1))){
+               if (value>=(100 - (granadeList.length + 1))){
                   newSquareBox.classList.add('bg-green');
                   alert("Complimenti campione! Hai vintoo!!")
 
