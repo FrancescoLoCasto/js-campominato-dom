@@ -10,3 +10,7 @@ div.cube{
    height: calc(100% / 10);
    border: 2px solid black;
 }
+
+.bg-green{
+   background-color: greenyellow;
+}

@@ -18,15 +18,34 @@ startElement.addEventListener('click', function(){
    value.innerHTML = result
 
       for(let i = 1; i <= 100; i++){
-         while (bgranadeList.length>15){
+         while (granadeList.length>15){
             granadeList.splice(Math.floor(getRandomNumber(0,granadeList.length)),1);
         }
 
-         let newSquareBox = createSquare();
-         newSquareBox.innerHTML = i
+            let newSquareBox = createSquare();
+            newSquareBox.innerHTML = i
 
-         newSquareBox.addEventListener('click', function(){
+            newSquareBox.addEventListener('click', function(){
+               if (score>=(100 - (granadeList.length + 1))){
+                  newSquareBox.classList.add('bg-green');
+                  alert("Complimenti campione! Hai vintoo!!")
 
+            }else if(granadeList.includes(i)){
+               alert("Booom Hai preso una bomba amico!");
+               boxElement.innerHTML = "";
+               boxElement.classList.remove('largeBox')
+               result = 0
+            }else if(!newSquare.classList.contains('bg-green')){
+               newSquareBox.classList.add('bg-green');
+               result +=1;
+               value.innerHTML = result
+            }
          })
+
+
+         boxElement.appendChild(newSquare);
+         granadeList.push(i);
+         newSquareBox.classList.add(`new-${i}`)
+
       }
 })
