@@ -10,5 +10,23 @@ const sectionMainElement = document.getElementById('sectionMain');
 const value = document.getElementById('value');
 
 startElement.addEventListener('click', function(){
+   boxElement.innerHTML = "";
+   boxElement.classList.add('largeBox')
 
+   const granadeList = [];
+   let result = 0;
+   value.innerHTML = result
+
+      for(let i = 1; i <= 100; i++){
+         while (bgranadeList.length>15){
+            granadeList.splice(Math.floor(getRandomNumber(0,granadeList.length)),1);
+        }
+
+         let newSquareBox = createSquare();
+         newSquareBox.innerHTML = i
+
+         newSquareBox.addEventListener('click', function(){
+
+         })
+      }
 })
