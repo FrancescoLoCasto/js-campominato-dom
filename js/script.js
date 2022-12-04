@@ -35,7 +35,7 @@ startElement.addEventListener('click', function(){
                boxElement.innerHTML = "";
                boxElement.classList.remove('largeBox')
                result = 0
-            }else if(!newSquare.classList.contains('bg-green')){
+            }else if(!newSquareBox.classList.contains('bg-green')){
                newSquareBox.classList.add('bg-green');
                result +=1;
                value.innerHTML = result
@@ -43,9 +43,27 @@ startElement.addEventListener('click', function(){
          })
 
 
-         boxElement.appendChild(newSquare);
+         boxElement.appendChild(newSquareBox);
          granadeList.push(i);
          newSquareBox.classList.add(`new-${i}`)
 
       }
 })
+
+//Section Function
+
+   function getRandomNumber(numMin, numMax){
+      if(numMin===numMax){
+         return numMax
+      }
+      return Math.floor(Math.random()*(numMax - numMin + 1) + numMin);
+   }
+
+
+   function createSquare (){
+      const DivElementCreate = document.createElement('div');
+      DivElementCreate.classList.add('cube');
+      return DivElementCreate;
+  }
+
+
